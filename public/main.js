@@ -2,6 +2,7 @@ var main = {
 	preload: function() {
 		// Load all our assets
 		game.load.image('paddle', 'paddle.png');
+		game.load.image('paddle2', 'paddle2.png');
 		game.load.image('ball', 'ball.png');
 		game.load.image('brik', 'brick.png');
 		game.load.image('brik2', 'brick2.png');
@@ -19,7 +20,7 @@ var main = {
         this.cursor2.D = game.input.keyboard.addKey(Phaser.Keyboard.D)
 
 		// Create the paddle
-		this.paddle = game.add.sprite(200, 300, 'paddle');
+		this.paddle = game.add.sprite(200, 300, 'paddle2');
 		game.physics.arcade.enable(this.paddle);
 		this.paddle.body.immovable = true;
 
