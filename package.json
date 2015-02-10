@@ -1,0 +1,21 @@
+{
+  "name": "blockGame",
+  "version": "1.0.0",
+  "description": "best game everrrr",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pauly G",
+  "license": "ISC",
+  "dependencies" : {
+     "morgan": "~1.0.0",
+     "body-parser": "^1.10.0",
+     "cookie-parser": "^1.3.3",
+     "ejs": "^1.0.0",
+     "express": "^4.10.5",
+     "method-override": "^2.3.0",
+     "path": "^0.4.9",
+     "pg": "^4.1.0"
+  }
+}

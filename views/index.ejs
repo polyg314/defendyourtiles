@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title> Game </title>
+
+		<script type="text/javascript" src="phaser.min.js"></script>
+
+		<script type="text/javascript" src="main.js"></script>
+
+<!-- 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.2.2/phaser.map"></script>
+ -->
+
+		
+		</script>
+	</head>
+
+	<style>
+		body{
+			text-align: center;
+		}
+		#gameDiv{
+			margin-left: 33%;
+		}
+
+		#title{
+			z-index: 10;
+			position: relative;
+			float: left;
+			margin-left: 30px;
+			margin-top: 350px;
+		}
+
+		#controlsKey{
+			z-index: 10;
+			position: relative;
+			float: right;
+			margin-right: 170px;
+			margin-top: 230px;
+		}
+
+	</style>
+
+	<body>
+<!-- 		<p>Use the arrow keys to move the paddle and destroy the bricks</p> -->
+		<div id="title"><h1>DEFEND YOUR TILES</h1></div>
+				<div id="controlsKey">
+			<h2>Purple Player Controls:</h2> <br>
+				<h5>left and right arrow keys</h5><br><br>
+			<h2>Green Player Controls: </h2><br>
+				<h5>A (move left) and D (move right)</h5>
+		</div>
+		<div id="gameDiv"> </div>
+
+	</body>
+
+</html>
