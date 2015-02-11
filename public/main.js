@@ -3,7 +3,7 @@ var main = {
 		// Load all our assets
 		game.load.image('paddle', 'paddle.png');
 		game.load.image('paddle2', 'paddle2.png');
-		game.load.image('ball', 'ball.png');
+		game.load.image('ball', 'kim.png');
 		game.load.image('brik', 'brick.png');
 		game.load.image('brik2', 'brick2.png');
 
@@ -40,6 +40,7 @@ var main = {
 		// Create first group of bricks
 		this.bricks = game.add.group();
 		this.bricks.enableBody = true;
+		
 		for (var i = 0; i < 5; i++) 
 			for (var j = 0; j < 5; j++) 
 				game.add.sprite(55+i*60, 55+j*35, 'brik2', 0, this.bricks);
@@ -49,6 +50,8 @@ var main = {
 		//Create second group of bricks
 		this.bricks2 = game.add.group();
 		this.bricks2.enableBody = true;
+
+
 		for (var i = 0; i < 5; i++) 
 			for (var j = 0; j < 5; j++) 
 				game.add.sprite(55+i*60, 605+j*35, 'brik', 0, this.bricks2);
@@ -91,10 +94,14 @@ var main = {
 			console.log(bottomCount)
 			if(bottomCount === 25){
 				alert('Purple Wins!')
-				// main.create();
+				this.paddle.kill();
+				this.paddle2.kill();
+				this.ball.kill();
+				main.create();
+				main.update();
 				// var game = new Phaser.Game(400, 800, Phaser.AUTO, 'gameDiv');
-				// var bottomCount = 0;
-				// var topCount = 0;
+				bottomCount = 0;
+				topCount = 0;
 				// game.state.add('main', main);
 				// game.state.start('main');
 			}
@@ -103,10 +110,14 @@ var main = {
 			topCount ++;
 			if(topCount === 25){
 				alert('Green Wins!')
-				// main.create();
+				this.paddle.kill();
+				this.paddle2.kill();
+				this.ball.kill();
+				main.create();
+				main.update();
 				// var game = new Phaser.Game(400, 800, Phaser.AUTO, 'gameDiv');
-				// var bottomCount = 0;
-				// var topCount = 0;
+				bottomCount = 0;
+				topCount = 0;
 				// game.state.add('main', main);
 				// game.state.start('main');
 			}
