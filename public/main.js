@@ -1,11 +1,11 @@
 var main = {
 	preload: function() {
 		// Load all our assets
-		game.load.image('paddle', 'paddle.png');
-		game.load.image('paddle2', 'paddle2.png');
-		game.load.image('ball', 'kim.png');
-		game.load.image('brik', 'brick.png');
-		game.load.image('brik2', 'brick2.png');
+		game.load.image('paddle', 'fence.png');
+		game.load.image('paddle2', 'fence.png');
+		game.load.image('ball', 'wolf.png');
+		game.load.image('brik', 'sheep.png');
+		game.load.image('brik2', 'sheep2.png');
 
 
 	},
@@ -23,18 +23,20 @@ var main = {
 		this.paddle = game.add.sprite(200, 300, 'paddle2');
 		game.physics.arcade.enable(this.paddle);
 		this.paddle.body.immovable = true;
+		this.paddle.body.collideWorldBounds = true;
 
 		// Create the second paddle
 		this.paddle2 = game.add.sprite(200, 500, 'paddle');
 		game.physics.arcade.enable(this.paddle2);
 		this.paddle2.body.immovable = true;
+		this.paddle2.body.collideWorldBounds = true;
 
 
 		// Create the bouncy ball
 		this.ball = game.add.sprite(200, 300, 'ball');
 		game.physics.arcade.enable(this.ball);
 		this.ball.body.collideWorldBounds = true;
-		this.ball.body.velocity.x = 200; this.ball.body.velocity.y = 250;
+		this.ball.body.velocity.x = 20; this.ball.body.velocity.y = 200;
 		this.ball.body.bounce.x = 1; this.ball.body.bounce.y = 1;
 
 		// Create first group of bricks
@@ -93,7 +95,7 @@ var main = {
 			bottomCount ++;
 			console.log(bottomCount)
 			if(bottomCount === 25){
-				alert('Purple Wins!')
+				alert('Top Wins!')
 				this.paddle.kill();
 				this.paddle2.kill();
 				this.ball.kill();
@@ -109,7 +111,7 @@ var main = {
 		else{
 			topCount ++;
 			if(topCount === 25){
-				alert('Green Wins!')
+				alert('Bottom Wins!')
 				this.paddle.kill();
 				this.paddle2.kill();
 				this.ball.kill();
